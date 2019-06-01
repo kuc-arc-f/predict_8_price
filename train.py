@@ -52,12 +52,6 @@ print(Y.min() )
 
 # 学習データとテストデータに分ける
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.25 ,random_state=0)
-#x_train_sub =x_train
-#x_test_sub  =x_test
-#x_train = x_train["x_dat"]
-#x_test = x_test["x_dat"]
-#print(type(x_train) )
-#quit()
 x_train =np.array(x_train, dtype = np.float32).reshape(len(x_train), 5)
 y_train =np.array(y_train, dtype = np.float32).reshape(len(y_train), 1)
 x_test  =np.array(x_test, dtype  = np.float32).reshape(len(x_test), 5 )
@@ -70,7 +64,6 @@ print( x_test.shape  , y_test.shape  )
 #quit()
 
 # train
-#max_epochs = 50
 train_size = x_train.shape[ 0]
 batch_size = 100
 learning_rate = 0.01
